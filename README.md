@@ -96,3 +96,64 @@ or
 
 **Invoke** : Run the function.
 _We can also say 'call' the function_
+
+**Importing/Exporting Modules** :
+
+Creating a module & export it:
+const greet = () => console.log('Hey');
+
+    module.exports = greet;
+
+Importing the module above:
+const greet = require('./greet');
+//no need to add .js if we're importing a js module
+
+    greet();
+
+**Name/Value Pair** : A name which maps to a value.
+_The name may be defined more than once, but only can have one value in any given context. That value may be more name/value pairs._
+
+    Address = '100 Main St'
+
+**Object** : A collection of name/value pairs.
+_The simplest definition when talking about Javascript_
+
+Object -> Primitive (property) || Object (property) || Function (method)
+
+**Object Literal** : Name/Value pairs separated by commas and surrounded by curly braces.
+_This is just quick, shorthand way to create Javascript objects in code_
+
+    {
+        Street: 'Main',
+        Number: 100,
+        Apartment:
+            {
+                Floor: 3,
+                Number: 301
+            }
+    }
+
+
+    const person = {
+        firstName: 'John',
+        lastName: 'Doe',
+        greet: function() {
+            console.log('Hello', this.firstName, this.lastName)
+            }
+    }
+
+    person.greet();
+
+**Inheritance** : One object gets access to the properties and methods of another object.
+_Every object has a property that actually points to another object. It's the object's prototype. It's the thing it inherits from_
+
+**Function Constructors** : A normal function that is used to construct objects.
+_The `this` variable points to a new empty object, and that object is returned from the function automatically_
+
+    function Person(firstName, lastName) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+    }
+
+    const john = new Person('John', 'Doe');
+    console.log(john.firstName) // 'John'
