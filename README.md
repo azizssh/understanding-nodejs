@@ -79,11 +79,14 @@ _Runs app.js with Node_
 
 **First-class Functions** : Everything you can with other types you can do with functions.
 _You can use functions like strings, numbers, etc (i.e. pass them around, set variables equal to them, put them in arrays, and more)_
-`const greet = () => console.log('Hey')`
-`function logGreeting(fn) {`
-` fn();`
-`}`
-`logGreeting(greet);`
+
+    function greet() {
+        console.log('hi');
+    }
+    function logGreeting(fn) {
+        fn();
+    }
+    logGreeting(greet);
 
 **Expression** : A block of code that results in a value.
 _Function expressions are possible in Javascript because functions are first-class_
