@@ -90,7 +90,9 @@ _You can use functions like strings, numbers, etc (i.e. pass them around, set va
 
 **Expression** : A block of code that results in a value.
 _Function expressions are possible in Javascript because functions are first-class_
-`const a = function() {... }` or `const a = () => {...}`
+`const a = function() {...}`
+or
+`const a = () => {...}`
 
 **Invoke** : Run the function.
 _We can also say 'call' the function_

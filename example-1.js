@@ -4,8 +4,14 @@ const c = 3;
 
 console.log(a+b+c);
 
-const fn = function() {
+const greet = function() {
     console.log('hello')
 }
 
-fn()
+greet()
+
+function logGreeting(fn) {
+    fn()
+}
+
+logGreeting(greet)
