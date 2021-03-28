@@ -51,3 +51,14 @@ Client: asks for services. Makes a request to a server. The request is in some s
 - A way to deal with work that takes a long time
 
 ### The C++ Core
+Node deps folder (.cc .h files)
+
+### The JS Core
+Node lib folder (.js files in it, wrappers for C++ features)
+zlib.js: 
+`var binding = process.binding('zlib');` 
+_Grabs C++ feature and makes it available in JS_
+
+`node -v`
+_Check node version_
+
