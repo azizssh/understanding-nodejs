@@ -182,8 +182,8 @@ Passed by value:
 Passed by reference:
 
     function changeObj(d) {
-    d.prop1 = function () {};
-    d.prop2 = {};
+        d.prop1 = function () {};
+        d.prop2 = {};
     }
 
     let c = {};
