@@ -169,6 +169,7 @@ _The `this` variable points to a new empty object, and that object is returned f
 **Primitive** : A type of data that represents a single value.
 _Like a number, or a string. In other words, not an object_
 
+Passed by value:
     function change(b) {
         b = 2;
     }
@@ -177,7 +178,7 @@ _Like a number, or a string. In other words, not an object_
     change(a);
     console.log(a); // 1
 
-
+Passed by reference:
     function changeObj(d) {
     d.prop1 = function () {};
     d.prop2 = {};
