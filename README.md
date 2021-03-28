@@ -155,5 +155,36 @@ _The `this` variable points to a new empty object, and that object is returned f
         this.lastName = lastName;
     }
 
+    Person.prototype.greet = function() {
+        console.log('Hello', this.firstName, this.lastName);
+    }
+
     const john = new Person('John', 'Doe');
     console.log(john.firstName) // 'John'
+    john.greet() // Hello John Doe
+
+    const jane = new Person('Jane', 'Doe')
+    jane.greet(); // Hello Jane Doe
+
+**Primitive** : A type of data that represents a single value.
+_Like a number, or a string. In other words, not an object_
+
+    function change(b) {
+        b = 2;
+    }
+
+    let a = 1;
+    change(a);
+    console.log(a); // 1
+
+
+    function changeObj(d) {
+    d.prop1 = function () {};
+    d.prop2 = {};
+    }
+
+    let c = {};
+    c.prop1 = {};
+    changeObj(c);
+    console.log(c); // { prop1: [Function (anonymous)], prop2: {} }
+
