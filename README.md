@@ -9,3 +9,7 @@ Dive deep under the hood of NodeJS. Learn V8, Express, the MEAN stack, core Java
 Command Line Interface: A utility to type commands to your computer rather than clicking.
 
 _Bash on Linux, Terminal on Mac, Command Prompt/PowerShell on Windows_
+
+Arguments: Values you give your program that affect how it runs.
+
+_Essentially passing parameters to a function_
