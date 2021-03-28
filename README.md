@@ -191,3 +191,19 @@ Passed by reference:
     changeObj(c);
     console.log(c); // { prop1: [Function (anonymous)], prop2: {} }
 
+**Scope** : Where in code you have access to a particular variable or a function.
+
+    const firstName = "Jane";
+
+    // wrap into parentheses to tell JS it's an expression
+    // IIFE, we create an anonymous function and invoke it right away
+    (function (lastName) {
+        const firstName = "John";
+        console.log(firstName, lastName);
+    })("Doe");
+
+    console.log(firstName);
+
+    // John Doe
+    // Jane
+
