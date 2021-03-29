@@ -207,6 +207,32 @@ Passed by reference:
     // John Doe
     // Jane
 
-**require** is a function, that you pass a 'path' too
+**require** is a function, that you pass a 'path' to
 
 **module.exports** is what the require function returns. This works because **your code is actually wrapped in a function** that is given these things as function parameters. What you write is actually a body of a V8 function.
+
+    (function (exports, require, module, __filename, __dirname) {
+        var greet = function() {
+            console.log('Hello');
+        };
+
+        module.exports = greet;
+    });
+
+    fn(module.exports, require, module, filename, dirname)
+
+    return module.exports;
+
+**JSON** : JavaScript Object Notation. A standard for structuring data that is inspired by JavaScript object literals.
+_JavaScript engines are built to understand it_
+
+    {
+        "firstName": "John",
+        "lastName": "Doe",
+        "address": {
+            "street": "101 Main St",
+            "city": "New York",
+            "state": "NY"
+        }
+    }
+
