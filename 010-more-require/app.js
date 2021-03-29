@@ -3,3 +3,6 @@ const greet = require('./greet')
 
 greet.english();
 greet.spanish();
+
+const greetings = require('./greetings.json')
+console.log(greetings)
