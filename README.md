@@ -207,3 +207,6 @@ Passed by reference:
     // John Doe
     // Jane
 
+**require** is a function, that you pass a 'path' too
+
+**module.exports** is what the require function returns. This works because **your code is actually wrapped in a function** that is given these things as function parameters. What you write is actually a body of a V8 function.
